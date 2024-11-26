@@ -69,6 +69,19 @@
         sarcosuchusAudio.pause();
         sarcosuchusAudio.currentTime = 0;
     });
+
+	document.querySelector('#scene').addEventListener('click', function (event) {
+                var clickedElement = event.target;
+
+                // Preguntar si se hizo clic en el modelo
+                if (clickedElement.classList.contains('clickable')) {
+                    if (clickedElement.getAttribute('gltf-model') === "#modelo") {
+                        window.location.href = "https://www.nationalgeographic.com.es/animales/delfines"; 
+                    } else if (clickedElement.getAttribute('gltf-model') === "#modelo2") {
+                        window.location.href = "https://www.nationalgeographic.com.es/animales/cocodrilo; //
+                    }
+                }
+            });
 </script>
         
     </body>
